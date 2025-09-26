@@ -15,6 +15,7 @@ export const EmployeeTable = ({ employees, onEdit, onDelete }: EmployeeTableProp
         <table className="w-full">
           <thead className="bg-table-header">
             <tr>
+              <th className="text-left py-4 px-6 text-text-primary font-bold">ID</th>
               <th className="text-left py-4 px-6 text-text-primary font-bold">Name</th>
               <th className="text-left py-4 px-6 text-text-primary font-bold">Email</th>
               <th className="text-left py-4 px-6 text-text-primary font-bold">Position</th>
@@ -27,6 +28,7 @@ export const EmployeeTable = ({ employees, onEdit, onDelete }: EmployeeTableProp
                 key={employee.id} 
                 className="border-b border-border-light hover:bg-table-hover transition-colors duration-150"
               >
+                <td className="py-4 px-6 text-text-secondary font-mono text-sm">{employee.id}</td>
                 <td className="py-4 px-6 text-text-primary font-medium">{employee.name}</td>
                 <td className="py-4 px-6 text-text-secondary">{employee.email}</td>
                 <td className="py-4 px-6 text-text-secondary">{employee.position}</td>
