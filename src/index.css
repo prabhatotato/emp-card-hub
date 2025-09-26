@@ -1,40 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Employee Management App Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    /* App Background */
+    --app-background: 210 11% 97%; /* #F8F9FA */
+    --container-background: 0 0% 100%; /* #FFFFFF */
+    
+    /* Text Colors */
+    --text-primary: 210 11% 20%; /* #333333 */
+    --text-secondary: 210 7% 46%; /* #6C757D */
+    
+    /* Brand Colors */
+    --accent: 134 61% 41%; /* #28A745 */
+    --accent-foreground: 0 0% 100%;
+    --danger: 354 70% 54%; /* #DC3545 */
+    --danger-foreground: 0 0% 100%;
+    
+    /* Table Specific */
+    --table-header: 214 32% 97%; /* #F7F9FC */
+    --table-hover: 210 14% 89%; /* #E9ECEF */
+    
+    /* Form & UI Elements */
+    --border-light: 210 14% 89%;
+    --input-background: 0 0% 100%;
+    --input-border: 210 14% 89%;
+    --input-focus: 134 61% 41%;
+    
+    /* Shadows */
+    --shadow-card: 0 2px 8px -2px hsl(210 11% 20% / 0.1);
+    --shadow-button: 0 1px 3px -1px hsl(210 11% 20% / 0.1);
+    --shadow-modal: 0 10px 25px -5px hsl(210 11% 20% / 0.1);
+    
+    /* Standard shadcn variables for compatibility */
+    --background: 210 11% 97%;
+    --foreground: 210 11% 20%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 210 11% 20%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
+    --popover-foreground: 210 11% 20%;
+    --primary: 134 61% 41%;
+    --primary-foreground: 0 0% 100%;
     --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
+    --secondary-foreground: 210 11% 20%;
     --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --muted-foreground: 210 7% 46%;
+    --destructive: 354 70% 54%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 14% 89%;
+    --input: 210 14% 89%;
+    --ring: 134 61% 41%;
 
     --radius: 0.5rem;
 
@@ -100,6 +120,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-lato;
   }
 }

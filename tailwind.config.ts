@@ -13,7 +13,23 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        lato: ['Lato', 'Segoe UI', 'sans-serif'],
+      },
       colors: {
+        /* App Specific Colors */
+        'app-bg': "hsl(var(--app-background))",
+        'container-bg': "hsl(var(--container-background))",
+        'text-primary': "hsl(var(--text-primary))",
+        'text-secondary': "hsl(var(--text-secondary))",
+        'table-header': "hsl(var(--table-header))",
+        'table-hover': "hsl(var(--table-hover))",
+        'border-light': "hsl(var(--border-light))",
+        'input-bg': "hsl(var(--input-background))",
+        'input-border': "hsl(var(--input-border))",
+        'input-focus': "hsl(var(--input-focus))",
+        
+        /* Standard shadcn colors */
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -57,6 +73,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      boxShadow: {
+        'card': 'var(--shadow-card)',
+        'button': 'var(--shadow-button)',
+        'modal': 'var(--shadow-modal)',
       },
       borderRadius: {
         lg: "var(--radius)",
